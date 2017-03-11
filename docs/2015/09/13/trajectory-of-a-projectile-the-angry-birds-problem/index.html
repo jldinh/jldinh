@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Trajectory of a projectile: the Angry Birds problem &middot; JL Dinh</title>
+    <meta name="generator" content="Hugo 0.19" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jean-Louis Dinh">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem"/>
+    <link rel="icon" href="https://www.jldinh.com/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.jldinh.com/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://www.jldinh.com/css/style.css">
+    <link rel="stylesheet" href="https://www.jldinh.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.jldinh.com/css/monokai.css">
+    <link rel="stylesheet" href="https://www.jldinh.com/fancybox/jquery.fancybox.css">
+    
+    <link rel="stylesheet" href="https://www.jldinh.com/css/cc.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Trajectory of a projectile: the Angry Birds problem" />
+<meta property="og:description" content="Differential equations are not only used to predict when you will arrive somewhere.
+Like at least 200m other people, you may have run into this issue at one point of your life.
+How far should you drag the little bird to slay the evil pigs?
+First, let us make an observation. However you throw the bird, it always flies according to a parabolic trajectory.
+This is because the game is inspired by realphysics." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem" />
+
+
+
+<meta property="article:published_time" content="2015-09-13T16:49:43&#43;00:00"/>
+<meta property="article:modified_time" content="2015-09-13T16:49:43&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Trajectory of a projectile: the Angry Birds problem">
+<meta itemprop="description" content="Differential equations are not only used to predict when you will arrive somewhere.
+Like at least 200m other people, you may have run into this issue at one point of your life.
+How far should you drag the little bird to slay the evil pigs?
+First, let us make an observation. However you throw the bird, it always flies according to a parabolic trajectory.
+This is because the game is inspired by realphysics.">
+
+
+<meta itemprop="dateModified" content="2015-09-13T16:49:43&#43;00:00" />
+<meta itemprop="wordCount" content="626">
+
+
+
+<meta itemprop="keywords" content="modeling,outreach,python,ubuntu,ubuntu-14.04," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Trajectory of a projectile: the Angry Birds problem"/>
+<meta name="twitter:title" content="Trajectory of a projectile: the Angry Birds problem"/>
+<meta name="twitter:description" content="Differential equations are not only used to predict when you will arrive somewhere.
+Like at least 200m other people, you may have run into this issue at one point of your life.
+How far should you drag the little bird to slay the evil pigs?
+First, let us make an observation. However you throw the bird, it always flies according to a parabolic trajectory.
+This is because the game is inspired by realphysics."/>
+
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://www.jldinh.com" id="logo">
+          
+          <i class="logo" style="background-image: url('https://www.jldinh.com/css/images/logo.png')"></i>
+          
+          <span class="site-title">JL Dinh</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://www.jldinh.com/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="https://www.jldinh.com/categories/modeling/">Modeling</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://www.jldinh.com/categories/outreach/">Outreach</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://www.jldinh.com/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://www.jldinh.com" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://www.jldinh.com/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="https://www.jldinh.com/categories/modeling/">Modeling</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://www.jldinh.com/categories/outreach/">Outreach</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://www.jldinh.com" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://www.jldinh.com/css/images/avatar.png">
+      <h2 id="name">Jean-Louis Dinh</h2>
+      <h3 id="title">Mathematical modeling and software development</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>UK</span>
+      
+          <a id="follow" href="https://github.com/jldinh">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        7
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          3
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/jldinh" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <td><a href="https://www.jldinh.com/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="https://www.jldinh.com/images/redbird.jpg" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem">
+    <h1 class="article-title" itemprop="name">
+        Trajectory of a projectile: the Angry Birds problem
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2015-09-13 16:49:43 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+            &middot;
+            626
+            words
+            &middot;
+            3
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">Outreach</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>Differential equations are not only used to <a href="/2015/09/13/differential-equations/">predict when you will arrive somewhere</a>.</p>
+
+<p>Like at least <a href="http://www.theguardian.com/technology/appsblog/2012/oct/10/angry-birds-200m-monthly-users">200m other people</a>, you may have run into this issue at one point of your life.</p>
+
+<p><img src="/images/angrybirds.png" alt="" /></p>
+
+<p>How far should you drag the little bird to slay the evil pigs?</p>
+
+<p>First, let us make an observation. However you throw the bird, it always flies according to a parabolic trajectory.</p>
+
+<p>This is because the game is inspired by realphysics. The trajectory of real projectiles flung into the air depend on two things:</p>
+
+<ul>
+<li>Its speed as it becomes airborne (in Angry Birds, this depends on how far back you draw the bird, and in which direction)</li>
+<li>The forces exerted on it: assuming we neglect friction, the only force exerted on the flying projectile is gravity (its weight).
+We could write differential equations using <a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#Newton.27s_second_law">Newton&rsquo;s 2nd law</a> to get an exact result, but let us keep this intuitive first.</li>
+</ul>
+
+<p>If we fling the bird upwards and forwards, then we can decompose its initial speed as it is released into two components: an horizontal component and a vertical component.</p>
+
+<p>As you probably know, weight (the only force exerted on the bird once it is released) is directed vertically, downwards. Therefore, it has no horizontal component.</p>
+
+<p>So what is going to happen next?</p>
+
+<ul>
+<li>On the horizontal axis, the bird is going to keep its horizontal velocity because no force affects it.</li>
+<li>On the vertical axis though, we have opposite tendencies. Because of its initial velocity, the bird is rising upwards. However, its weight is pulling it down, so it progressively slows down until it comes to a stop in the vertical axis. Then its starts falling down, faster and faster.
+If you try to simulate the motion of the bird by drawing with a pencil on a piece of paper, you should get something that looks like a parabola.</li>
+</ul>
+
+<p>Now, if you want to go further, we are going to need these differential equations. The weight of the projectile is the product of its mass $m$) and the gravitational acceleration $g$, so according to Newton&rsquo;s Second Law:</p>
+
+<p>$$ m\frac{d^2x}{dt^2}=0 $$
+$$ m\frac{d^2y}{dt^2}=-mg $$</p>
+
+<p>We integrate twice to get the trajectory of the projectile.</p>
+
+<p>$$ \frac{dx}{dt}=v_x $$
+$$ \frac{dy}{dt}=v_y-mgt $$</p>
+
+<p>$$ x(t)=v_x.t $$
+$$ y(t)=v_y.t-\frac{1}{2}gt^2$$</p>
+
+<p>We can then substitute $x$ in the equation of $y$.</p>
+
+<p>$$ y(t)=\frac{v_y}{v_x}x(t)-\frac{1}{2}\frac{g}{{v_x}^2}x(t)^2 $$</p>
+
+<p>We want to know at what distance ($x$) the projectile hits the ground ($y=0$). This requires solving a second degree equation, which yields to solutions.</p>
+
+<p>$$ y(t)=0\Leftrightarrow x(t)=0 \quad or \quad x(t)=\frac{2}{g}v_x v_y$$</p>
+
+<p>We discard the first as it is the launching point. The second one gives an equation for the range of the projectile depending on its launching speed (and the gravitational acceleration).</p>
+
+<p>We can go further and study which angle to shoot at to reach the maximal range. To do this, we first substitute $v_y$ in the equation.</p>
+
+<p>$$ v_x^2+v_y^2=v^2 \Rightarrow v_y=\sqrt{v^2-v_x^2} \<br />
+x(t)=\frac{2}{g}v_x \sqrt{v^2-v_x^2}$$</p>
+
+<p>We then differentiate the equation of $x$ with respect to $v_x$.</p>
+
+<p>$$ \frac{dx(t)}{dv_x}=\frac{2}{g}\left( \sqrt{v^2-v_x^2}-v_x^2\frac{1}{\sqrt{v^2-v_x^2}}\right )$$</p>
+
+<p>The maximum range is reached when the derivative is 0.</p>
+
+<p>$$ \frac{dx(t)}{dv_x}=0\Rightarrow v_x^2=v^2-v_x^2$$</p>
+
+<p>We recognize the expression of $v_y$ there.</p>
+
+<p>$$ v_x^2=v_y^2$$</p>
+
+<p>As both $v_x$ and $v_y$ are positive:</p>
+
+<p>$$ v_x=v_y$$</p>
+
+<p>The <strong>optimal angle</strong> to launch a projectile and reach the <strong>maximal range</strong> is therefore <strong>45 degrees</strong>.</p>
+
+<p><img src="/images/shotput.jpg" alt="" /> <small>Photo by <a href="http://www.flickr.com/photos/80405115@N00/14949411366">Koji Kawano</a> <img src="/images/cc.png#cc" alt="" title="Attribution-NoDerivs License" /></small></p>
+
+<p>This result does not only apply to Angry Birds, but also to real sports, like the <a href="http://en.wikipedia.org/wiki/Shot_put">shot put</a>, in which the optimal throwing angle is also close to 45 degrees.</p>
+
+<blockquote>
+<p>Two putting styles are in current general use by shot put competitors: the _glide_ and the <em>spin</em>. With all putting styles, the goal is to release the shot with maximum forward <a href="http://en.wikipedia.org/wiki/Velocity" title="Velocity">velocity</a> at an angle of approximately forty degrees.
+(Source: <a href="http://en.wikipedia.org/wiki/Shot_put#Legal_throws">Wikipedia</a>)</p>
+</blockquote>
+
+<p><small>Banner photo by <a href="http://www.flickr.com/photos/36604011@N08/6737187469">Nick Harris1</a> <img src="/images/cc.png#cc" alt="" title="Attribution-NoDerivs License" /></small></p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem" data-id="8ea79177b0c64d7a1ae185dbefd4d9b9" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="https://www.jldinh.com/2015/09/13/differential-equations" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Differential equations</div>
+    </a>
+    
+
+    
+</nav>
+
+
+    </article>
+
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/redbird.jpg)" alt="Trajectory of a projectile: the Angry Birds problem" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem" class="title">Trajectory of a projectile: the Angry Birds problem</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 16:49:43 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/differential-equations" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/integration.jpg)" alt="Trajectory of a projectile: the Angry Birds problem" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/differential-equations" class="title">Differential equations</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 16:36:26 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/boole.jpg)" alt="Trajectory of a projectile: the Angry Birds problem" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs" class="title">Boolean algebra and adaptive programs</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 15:34:56 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/epitraits-outreach" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/blackboard.jpg)" alt="Trajectory of a projectile: the Angry Birds problem" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/epitraits-outreach" class="title">EpiTRAITS outreach</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 15:24:14 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/sofa.jpg)" alt="Trajectory of a projectile: the Angry Birds problem" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/modeling">
+                        Modeling
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04" class="title">Install the Sofa Framework on Ubuntu 14.04</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-07 10:41:05 &#43;0000 UTC" itemprop="datePublished">07-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/categories/modeling">
+                    modeling
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/categories/outreach">
+                    outreach
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/tags/python">
+                    python
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/tags/ubuntu-14.04">
+                    ubuntu-14.04
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="https://www.jldinh.com/tags/python" style="font-size: 12px;">python</a>
+        
+        
+        <a href="https://www.jldinh.com/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+        
+        <a href="https://www.jldinh.com/tags/ubuntu-14.04" style="font-size: 12px;">ubuntu-14.04</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://www.jldinh.com/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://www.jldinh.com/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+</body>
+</html>

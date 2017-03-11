@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu 14.04 on JL Dinh</title>
+    <link>https://www.jldinh.com/tags/ubuntu-14.04/index.xml</link>
+    <description>Recent content in Ubuntu 14.04 on JL Dinh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <atom:link href="https://www.jldinh.com/tags/ubuntu-14.04/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Install the Sofa Framework on Ubuntu 14.04</title>
+      <link>https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04</link>
+      <pubDate>Mon, 07 Sep 2015 10:41:05 +0000</pubDate>
+      
+      <guid>https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04</guid>
+      <description>&lt;p&gt;The instructions provided on the &lt;a href=&#34;https://www.sofa-framework.org/documentation/general-documentation/build-sofa/&#34;&gt;Sofa website&lt;/a&gt; are for Ubuntu 12.04. They mostly apply to Ubuntu 14.04 as well, except:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;You do not need cmake binaries from other repositories.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libopencascade-dev no longer exists, it has been replaced by many packages. I am not sure which ones are necessary, so, in doubt, I just installed them all:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;liboce-caf-dev&lt;/li&gt;
+&lt;li&gt;liboce-modeling-dev&lt;/li&gt;
+&lt;li&gt;liboce-visualization-dev&lt;/li&gt;
+&lt;li&gt;liboce-foundation-dev&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Before building, you might want to enable other features/plugins. From the build-release folder, run:&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;pre&gt;cmake-gui ..&lt;/pre&gt;
+and pick what you need. If you happen to be installing Sofa to use in conjunction with OpenAlea/VirtualPlants through the sofameca module (developed by the VirtualPlants team, not open source yet), pick these:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SOFA-LIB_GUI_QGLVIEWER&lt;/li&gt;
+&lt;li&gt;SOFA-PLUGIN_FLEXIBLE&lt;/li&gt;
+&lt;li&gt;SOFA-PLUGIN_IMAGE&lt;/li&gt;
+&lt;li&gt;SOFA-PLUGIN_SOFAPYTHON
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;https://flic.kr/p/bASEfK&#34;&gt;Scott Allen&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by-nd/2.0/&#34; title=&#34;Attribution-NoDerivs License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

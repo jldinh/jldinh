@@ -9,7 +9,7 @@ googleAnalytics = ""
 paginate = 10
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
-
+publishDir = "docs"
 
 [permalinks]
     post = "/:year/:month/:day/:slug"

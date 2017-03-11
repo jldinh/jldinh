@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Boolean algebra and adaptive programs &middot; JL Dinh</title>
+    <meta name="generator" content="Hugo 0.19" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jean-Louis Dinh">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs"/>
+    <link rel="icon" href="https://www.jldinh.com/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.jldinh.com/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://www.jldinh.com/css/style.css">
+    <link rel="stylesheet" href="https://www.jldinh.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.jldinh.com/css/monokai.css">
+    <link rel="stylesheet" href="https://www.jldinh.com/fancybox/jquery.fancybox.css">
+    
+    <link rel="stylesheet" href="https://www.jldinh.com/css/cc.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Boolean algebra and adaptive programs" />
+<meta property="og:description" content="If you have any experience of programming, you probably know that interactive programs rely on testing conditions and acting according to the outcomes.
+If not, imagine programming a self-driving racing car. If you give it a predetermined set of instructions, it might be able to drive itself on a given racing circuit. However, you are going to run into a wall if you put that car on another circuit (literally), or if you add other cars to the circuit." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs" />
+
+
+
+<meta property="article:published_time" content="2015-09-13T15:34:56&#43;00:00"/>
+<meta property="article:modified_time" content="2015-09-13T15:34:56&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Boolean algebra and adaptive programs">
+<meta itemprop="description" content="If you have any experience of programming, you probably know that interactive programs rely on testing conditions and acting according to the outcomes.
+If not, imagine programming a self-driving racing car. If you give it a predetermined set of instructions, it might be able to drive itself on a given racing circuit. However, you are going to run into a wall if you put that car on another circuit (literally), or if you add other cars to the circuit.">
+
+
+<meta itemprop="dateModified" content="2015-09-13T15:34:56&#43;00:00" />
+<meta itemprop="wordCount" content="616">
+
+
+
+<meta itemprop="keywords" content="modeling,outreach,python,ubuntu,ubuntu-14.04," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Boolean algebra and adaptive programs"/>
+<meta name="twitter:title" content="Boolean algebra and adaptive programs"/>
+<meta name="twitter:description" content="If you have any experience of programming, you probably know that interactive programs rely on testing conditions and acting according to the outcomes.
+If not, imagine programming a self-driving racing car. If you give it a predetermined set of instructions, it might be able to drive itself on a given racing circuit. However, you are going to run into a wall if you put that car on another circuit (literally), or if you add other cars to the circuit."/>
+
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://www.jldinh.com" id="logo">
+          
+          <i class="logo" style="background-image: url('https://www.jldinh.com/css/images/logo.png')"></i>
+          
+          <span class="site-title">JL Dinh</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://www.jldinh.com/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="https://www.jldinh.com/categories/modeling/">Modeling</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://www.jldinh.com/categories/outreach/">Outreach</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://www.jldinh.com/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://www.jldinh.com" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://www.jldinh.com/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="https://www.jldinh.com/categories/modeling/">Modeling</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://www.jldinh.com/categories/outreach/">Outreach</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://www.jldinh.com" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   		
+	    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="https://www.jldinh.com/css/images/avatar.png">
+      <h2 id="name">Jean-Louis Dinh</h2>
+      <h3 id="title">Mathematical modeling and software development</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>UK</span>
+      
+          <a id="follow" href="https://github.com/jldinh">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        7
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          3
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/jldinh" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <td><a href="https://www.jldinh.com/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+	    
+
+	    
+<section id="main">
+
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+                <img src="https://www.jldinh.com/images/boole.jpg" class="article-banner">
+            
+
+            <header class="article-header">
+    <a href="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs">
+    <h1 class="article-title" itemprop="name">
+        Boolean algebra and adaptive programs
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2015-09-13 15:34:56 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+            &middot;
+            616
+            words
+            &middot;
+            3
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">Outreach</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                <p>If you have any experience of programming, you probably know that interactive programs rely on testing conditions and acting according to the outcomes.</p>
+
+<p>If not, imagine programming a self-driving racing car. If you give it a predetermined set of instructions, it might be able to drive itself on a given racing circuit. However, you are going to run into a wall if you put that car on another circuit (literally), or if you add other cars to the circuit.</p>
+
+<p><img src="/images/carcrash.jpg" alt="" title="Ferrari Kiss by Valentini.antoine" /> <small>Photo by <a href="http://www.flickr.com/photos/47918183@N04/9129393830">Valentini.antoine</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" title="Attribution-ShareAlike License"><img src="/images/cc.png#cc" alt="" /></a></small></p>
+
+<p>In order for a program to be robust and able to adapt to its environment, it needs to check its state and the state of its environment (e.g.: is there a car ahead? If so, am I driving faster than it?) and act accordingly (e.g.: overtake it or just keep driving normally).
+<pre>if {there is a car ahead} and {I am faster}:
+    {I overtake it}
+else:
+    {I keep driving normally}</pre>
+This holds for computer programs, but also for biological programs. Let&rsquo;s take the example of plants. If you have plants, you might have noticed that they have a tendency to grow towards the light. This is particularly striking if you have a potted plant on a window sill.</p>
+
+<p><img src="/images/phototropism.jpg" alt="" title="dsc_2948.jpg by r_neches" /> <small>Photo by <a href="http://www.flickr.com/photos/66777430@N00/2081938105">r_neches</a> <a href="http://creativecommons.org/licenses/by/2.0/" title="Attribution License"><img src="/images/cc.png#cc" alt="" /></a></small></p>
+
+<p>Their program is something like:
+<pre>if {I am growing towards the light}:
+    {I keep growing}
+else:
+    {I bend towards the light}</pre>
+In the EpiTraits project, I am working on something a little different: the control of flowering. Still, it can be summarized in a similar way:
+<pre>if {days are long} and {the cold weather is over}:
+    {I make flowers}
+else:
+    {I make leaves}</pre>
+<img src="/images/flower.jpg" alt="" title="White Flower by Jeff Kubina" /> <small>Photo by <a href="http://www.flickr.com/photos/95118988@N00/8156603">Jeff Kubina</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" title="Attribution-ShareAlike License"><img src="/images/cc.png#cc" alt="" /></a></small></p>
+
+<p>You might have noticed that, in both computer and biological programs, the conditions we want to test for may be composed of several sub-clauses:</p>
+
+<ul>
+<li>{there is a car ahead} and {I am faster}</li>
+<li>{days are long} and {the cold weather is over}
+These are examples of Boolean algebra. Boolean algebra deals with variables that are either True or False, and the operations used to combined them, which include &ldquo;and&rdquo; (as seen above), &ldquo;or&rdquo;, &ldquo;not&rdquo;, and all combinations of the above.</li>
+</ul>
+
+<p>If we consider two statements A and B:</p>
+
+<ul>
+<li>(A and B) is true if and only if both A and B are True</li>
+<li>(A or B) is true if and only if A is True, B is True, or both are True</li>
+<li>(not A) is true if and only if A is False.
+As you can see, &ldquo;and&rdquo; and &ldquo;or&rdquo; are binary operators, and &ldquo;not&rdquo; is a unary operator.</li>
+</ul>
+
+<p>However, it is possible to use them to combine an arbitrary number of statements into a single statement. For instance, with 4 statements A, B, C and D, we could have:</p>
+
+<p>(A and B) or (C and (not D))</p>
+
+<p>Biological applications of Boolean algebra include Boolean models of Gene Regulatory Networks. Indeed, biological programs result from the coordinated expression of genes that regulate each other, so the activity of a gene can be described using Boolean algebra.</p>
+
+<p>In the flowering example I mentioned above, the gene that represents flowering is SOC1. It is activated by a day-length dependent gene, FT, and repressed by FLC, a gene that is itself repressed when the temperature is low.</p>
+
+<p>We therefore have:
+<pre>FT = {daylength is long}
+FLC = {winter is not over}
+SOC1 = FT and (not FLC)</pre>
+SOC1 is on if FT is on and FLC is off.</p>
+
+<p>We can do this for any gene of interest. The end result is a model able to predict the evolution of a biological system based on the inputs of the model (here, how long days are, and whether winter is over or not).</p>
+
+<p><img src="/images/crocus.jpg" alt="" title="Snowy Crocus by Red Junasun" /> <small>Photo by <a href="http://www.flickr.com/photos/41994050@N07/6823430303">Red Junasun</a> <a href="http://creativecommons.org/licenses/by/2.0/" title="Attribution License"><img src="/images/cc.png#cc" alt="" /></a></small></p>
+
+<p><small>Banner photo by <a href="http://www.flickr.com/photos/39377065@N08/6921390393">OpenPlaques</a> <a href="http://creativecommons.org/licenses/by/2.0/" title="Attribution License"><img src="/images/cc.png#cc" alt="" /></a></small></p>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs" data-id="7378ab2b5597b592ba468dbafef0c4b1" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="https://www.jldinh.com/2015/09/13/epitraits-outreach" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">EpiTRAITS outreach</div>
+    </a>
+    
+
+    
+    <a href="https://www.jldinh.com/2015/09/13/differential-equations" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Differential equations</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+
+    
+</section>
+
+
+	    
+	    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/redbird.jpg)" alt="Boolean algebra and adaptive programs" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem" class="title">Trajectory of a projectile: the Angry Birds problem</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 16:49:43 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/differential-equations" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/integration.jpg)" alt="Boolean algebra and adaptive programs" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/differential-equations" class="title">Differential equations</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 16:36:26 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/boole.jpg)" alt="Boolean algebra and adaptive programs" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs" class="title">Boolean algebra and adaptive programs</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 15:34:56 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/13/epitraits-outreach" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/blackboard.jpg)" alt="Boolean algebra and adaptive programs" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/outreach">
+                        Outreach
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/13/epitraits-outreach" class="title">EpiTRAITS outreach</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-13 15:24:14 &#43;0000 UTC" itemprop="datePublished">13-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04" class="thumbnail">
+                    
+                        <span style="background-image:url(https://www.jldinh.com/images/sofa.jpg)" alt="Boolean algebra and adaptive programs" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://www.jldinh.com/categories/modeling">
+                        Modeling
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04" class="title">Install the Sofa Framework on Ubuntu 14.04</a></p>
+                    <p class="item-date">
+                        <time datetime="2015-09-07 10:41:05 &#43;0000 UTC" itemprop="datePublished">07-09-2015</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/categories/modeling">
+                    modeling
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/categories/outreach">
+                    outreach
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/tags/python">
+                    python
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/tags/ubuntu">
+                    ubuntu
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://www.jldinh.com/tags/ubuntu-14.04">
+                    ubuntu-14.04
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="https://www.jldinh.com/tags/python" style="font-size: 12px;">python</a>
+        
+        
+        <a href="https://www.jldinh.com/tags/ubuntu" style="font-size: 12px;">ubuntu</a>
+        
+        
+        <a href="https://www.jldinh.com/tags/ubuntu-14.04" style="font-size: 12px;">ubuntu-14.04</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+	    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://www.jldinh.com/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://www.jldinh.com/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+</body>
+</html>

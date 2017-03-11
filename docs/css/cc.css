@@ -1,0 +1,5 @@
+img[src$="#cc"] {
+  display: inline;
+  height: 12pt;
+  width: 12pt;
+}
