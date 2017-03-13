@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on JL Dinh</title>
-    <link>https://www.jldinh.com/tags/ubuntu/index.xml</link>
+    <link>https://jldinh.com/tags/ubuntu/index.xml</link>
     <description>Recent content in Ubuntu on JL Dinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://www.jldinh.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jldinh.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Install the Sofa Framework on Ubuntu 14.04</title>
-      <link>https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04</link>
+      <link>https://jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04</link>
       <pubDate>Mon, 07 Sep 2015 10:41:05 +0000</pubDate>
       
-      <guid>https://www.jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04</guid>
+      <guid>https://jldinh.com/2015/09/07/install-the-sofa-framework-on-ubuntu-14-04</guid>
       <description>&lt;p&gt;The instructions provided on the &lt;a href=&#34;https://www.sofa-framework.org/documentation/general-documentation/build-sofa/&#34;&gt;Sofa website&lt;/a&gt; are for Ubuntu 12.04. They mostly apply to Ubuntu 14.04 as well, except:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -43,7 +43,7 @@ and pick what you need. If you happen to be installing Sofa to use in conjuncti
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;https://flic.kr/p/bASEfK&#34;&gt;Scott Allen&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by-nd/2.0/&#34; title=&#34;Attribution-NoDerivs License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;https://flic.kr/p/bASEfK&#34;&gt;Scott Allen&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by-nd/2.0/&#34; title=&#34;Attribution-NoDerivs License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 </description>
     </item>
     

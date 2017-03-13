@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Outreach on JL Dinh</title>
-    <link>https://www.jldinh.com/categories/outreach/index.xml</link>
+    <link>https://jldinh.com/categories/outreach/index.xml</link>
     <description>Recent content in Outreach on JL Dinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="https://www.jldinh.com/categories/outreach/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jldinh.com/categories/outreach/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Trajectory of a projectile: the Angry Birds problem</title>
-      <link>https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem</link>
+      <link>https://jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem</link>
       <pubDate>Sun, 13 Sep 2015 16:49:43 +0000</pubDate>
       
-      <guid>https://www.jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem</guid>
-      <description>&lt;p&gt;Differential equations are not only used to &lt;a href=&#34;https://www.jldinh.com/2015/09/13/differential-equations/&#34;&gt;predict when you will arrive somewhere&lt;/a&gt;.&lt;/p&gt;
+      <guid>https://jldinh.com/2015/09/13/trajectory-of-a-projectile-the-angry-birds-problem</guid>
+      <description>&lt;p&gt;Differential equations are not only used to &lt;a href=&#34;https://jldinh.com/2015/09/13/differential-equations/&#34;&gt;predict when you will arrive somewhere&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Like at least &lt;a href=&#34;http://www.theguardian.com/technology/appsblog/2012/oct/10/angry-birds-200m-monthly-users&#34;&gt;200m other people&lt;/a&gt;, you may have run into this issue at one point of your life.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/angrybirds.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/angrybirds.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;How far should you drag the little bird to slay the evil pigs?&lt;/p&gt;
 
@@ -91,7 +91,7 @@ x(t)=\frac{2}{g}v_x \sqrt{v^2-v_x^2}$$&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;optimal angle&lt;/strong&gt; to launch a projectile and reach the &lt;strong&gt;maximal range&lt;/strong&gt; is therefore &lt;strong&gt;45 degrees&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/shotput.jpg&#34; alt=&#34;&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/80405115@N00/14949411366&#34;&gt;Koji Kawano&lt;/a&gt; &lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; title=&#34;Attribution-NoDerivs License&#34; /&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/shotput.jpg&#34; alt=&#34;&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/80405115@N00/14949411366&#34;&gt;Koji Kawano&lt;/a&gt; &lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; title=&#34;Attribution-NoDerivs License&#34; /&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;This result does not only apply to Angry Birds, but also to real sports, like the &lt;a href=&#34;http://en.wikipedia.org/wiki/Shot_put&#34;&gt;shot put&lt;/a&gt;, in which the optimal throwing angle is also close to 45 degrees.&lt;/p&gt;
 
@@ -100,23 +100,23 @@ x(t)=\frac{2}{g}v_x \sqrt{v^2-v_x^2}$$&lt;/p&gt;
 (Source: &lt;a href=&#34;http://en.wikipedia.org/wiki/Shot_put#Legal_throws&#34;&gt;Wikipedia&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;http://www.flickr.com/photos/36604011@N08/6737187469&#34;&gt;Nick Harris1&lt;/a&gt; &lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; title=&#34;Attribution-NoDerivs License&#34; /&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;http://www.flickr.com/photos/36604011@N08/6737187469&#34;&gt;Nick Harris1&lt;/a&gt; &lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; title=&#34;Attribution-NoDerivs License&#34; /&gt;&lt;/small&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Differential equations</title>
-      <link>https://www.jldinh.com/2015/09/13/differential-equations</link>
+      <link>https://jldinh.com/2015/09/13/differential-equations</link>
       <pubDate>Sun, 13 Sep 2015 16:36:26 +0000</pubDate>
       
-      <guid>https://www.jldinh.com/2015/09/13/differential-equations</guid>
+      <guid>https://jldinh.com/2015/09/13/differential-equations</guid>
       <description>&lt;p&gt;If you read the post about &lt;a href=&#34;https://jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs/&#34;&gt;Boolean algebra&lt;/a&gt;, you might have noticed a substantial limitation: it can only deal with binary (True/False) variables.&lt;/p&gt;
 
 &lt;p&gt;How, then, can you make predictions for quantitative variables? You probably already know the answer.&lt;/p&gt;
 
 &lt;p&gt;If you are going to the seaside by car, the seaside is 100 km away, and you are driving at 50 km/h, how long will it take you to reach the seaside?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/drive_river.jpg&#34; alt=&#34;&#34; title=&#34;Endless Possibilities by Zach Dischner&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/35557234@N07/11533326155&#34;&gt;Zach Dischner&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/drive_river.jpg&#34; alt=&#34;&#34; title=&#34;Endless Possibilities by Zach Dischner&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/35557234@N07/11533326155&#34;&gt;Zach Dischner&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;2 hours, of course.&lt;/p&gt;
 
@@ -132,7 +132,7 @@ x(t)=\frac{2}{g}v_x \sqrt{v^2-v_x^2}$$&lt;/p&gt;
 
 &lt;p&gt;$$ \frac{dx}{dt}=100-\frac{1}{40}(x-50)^2$$&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/eqdiff.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/eqdiff.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Even if the differential equation is complex, you can still use it to plot the state of the system (e.g.: your position) at any instant in the future. This is what makes differential equations powerful.&lt;/p&gt;
 
@@ -148,7 +148,7 @@ x(t)=\frac{2}{g}v_x \sqrt{v^2-v_x^2}$$&lt;/p&gt;
 You then just have to look at when $x$ becomes greater than 100 to know when you will arrive.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/beach.jpg&#34; alt=&#34;&#34; title=&#34;Lano Beach by NeilsPhotography&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/21976354@N07/2348897751&#34;&gt;NeilsPhotography&lt;/a&gt; &lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; title=&#34;Attribution License&#34; /&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/beach.jpg&#34; alt=&#34;&#34; title=&#34;Lano Beach by NeilsPhotography&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/21976354@N07/2348897751&#34;&gt;NeilsPhotography&lt;/a&gt; &lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; title=&#34;Attribution License&#34; /&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;http://www.flickr.com/photos/126377022@N07/14596416049&#34;&gt;Internet Archive Book Images&lt;/a&gt; &lt;/small&gt;&lt;/p&gt;
 </description>
@@ -156,15 +156,15 @@ You then just have to look at when $x$ becomes greater than 100 to know when you
     
     <item>
       <title>Boolean algebra and adaptive programs</title>
-      <link>https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs</link>
+      <link>https://jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs</link>
       <pubDate>Sun, 13 Sep 2015 15:34:56 +0000</pubDate>
       
-      <guid>https://www.jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs</guid>
+      <guid>https://jldinh.com/2015/09/13/boolean-algebra-and-adaptive-programs</guid>
       <description>&lt;p&gt;If you have any experience of programming, you probably know that interactive programs rely on testing conditions and acting according to the outcomes.&lt;/p&gt;
 
 &lt;p&gt;If not, imagine programming a self-driving racing car. If you give it a predetermined set of instructions, it might be able to drive itself on a given racing circuit. However, you are going to run into a wall if you put that car on another circuit (literally), or if you add other cars to the circuit.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/carcrash.jpg&#34; alt=&#34;&#34; title=&#34;Ferrari Kiss by Valentini.antoine&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/47918183@N04/9129393830&#34;&gt;Valentini.antoine&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/2.0/&#34; title=&#34;Attribution-ShareAlike License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/carcrash.jpg&#34; alt=&#34;&#34; title=&#34;Ferrari Kiss by Valentini.antoine&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/47918183@N04/9129393830&#34;&gt;Valentini.antoine&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/2.0/&#34; title=&#34;Attribution-ShareAlike License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;In order for a program to be robust and able to adapt to its environment, it needs to check its state and the state of its environment (e.g.: is there a car ahead? If so, am I driving faster than it?) and act accordingly (e.g.: overtake it or just keep driving normally).
 &lt;pre&gt;if {there is a car ahead} and {I am faster}:
@@ -173,7 +173,7 @@ else:
     {I keep driving normally}&lt;/pre&gt;
 This holds for computer programs, but also for biological programs. Let&amp;rsquo;s take the example of plants. If you have plants, you might have noticed that they have a tendency to grow towards the light. This is particularly striking if you have a potted plant on a window sill.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/phototropism.jpg&#34; alt=&#34;&#34; title=&#34;dsc_2948.jpg by r_neches&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/66777430@N00/2081938105&#34;&gt;r_neches&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/phototropism.jpg&#34; alt=&#34;&#34; title=&#34;dsc_2948.jpg by r_neches&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/66777430@N00/2081938105&#34;&gt;r_neches&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;Their program is something like:
 &lt;pre&gt;if {I am growing towards the light}:
@@ -185,7 +185,7 @@ In the EpiTraits project, I am working on something a little different: the cont
     {I make flowers}
 else:
     {I make leaves}&lt;/pre&gt;
-&lt;img src=&#34;https://www.jldinh.com/images/flower.jpg&#34; alt=&#34;&#34; title=&#34;White Flower by Jeff Kubina&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/95118988@N00/8156603&#34;&gt;Jeff Kubina&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/2.0/&#34; title=&#34;Attribution-ShareAlike License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jldinh.com/images/flower.jpg&#34; alt=&#34;&#34; title=&#34;White Flower by Jeff Kubina&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/95118988@N00/8156603&#34;&gt;Jeff Kubina&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/2.0/&#34; title=&#34;Attribution-ShareAlike License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
 &lt;p&gt;You might have noticed that, in both computer and biological programs, the conditions we want to test for may be composed of several sub-clauses:&lt;/p&gt;
 
@@ -220,23 +220,23 @@ SOC1 is on if FT is on and FLC is off.&lt;/p&gt;
 
 &lt;p&gt;We can do this for any gene of interest. The end result is a model able to predict the evolution of a biological system based on the inputs of the model (here, how long days are, and whether winter is over or not).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://www.jldinh.com/images/crocus.jpg&#34; alt=&#34;&#34; title=&#34;Snowy Crocus by Red Junasun&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/41994050@N07/6823430303&#34;&gt;Red Junasun&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jldinh.com/images/crocus.jpg&#34; alt=&#34;&#34; title=&#34;Snowy Crocus by Red Junasun&#34; /&gt; &lt;small&gt;Photo by &lt;a href=&#34;http://www.flickr.com/photos/41994050@N07/6823430303&#34;&gt;Red Junasun&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;http://www.flickr.com/photos/39377065@N08/6921390393&#34;&gt;OpenPlaques&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;http://www.flickr.com/photos/39377065@N08/6921390393&#34;&gt;OpenPlaques&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>EpiTRAITS outreach</title>
-      <link>https://www.jldinh.com/2015/09/13/epitraits-outreach</link>
+      <link>https://jldinh.com/2015/09/13/epitraits-outreach</link>
       <pubDate>Sun, 13 Sep 2015 15:24:14 +0000</pubDate>
       
-      <guid>https://www.jldinh.com/2015/09/13/epitraits-outreach</guid>
+      <guid>https://jldinh.com/2015/09/13/epitraits-outreach</guid>
       <description>&lt;p&gt;This is a series of post I am starting as an outreach activity, in the context of my PhD research program, &lt;a href=&#34;http://www.epitraits.eu/&#34;&gt;EpiTRAITS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In these posts, I will try to explain some engineering and modeling approaches - not necessarily closely linked to my actual work for EpiTRAITS - that can be useful in real life.&lt;/p&gt;
 
-&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;http://www.flickr.com/photos/93529274@N00/1508924823&#34;&gt;thepatrick&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://www.jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Banner photo by &lt;a href=&#34;http://www.flickr.com/photos/93529274@N00/1508924823&#34;&gt;thepatrick&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34; title=&#34;Attribution License&#34;&gt;&lt;img src=&#34;https://jldinh.com/images/cc.png#cc&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 </description>
     </item>
     
